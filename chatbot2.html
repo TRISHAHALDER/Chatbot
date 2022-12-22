@@ -1,0 +1,59 @@
+<html>
+<head>
+
+<script>
+know = {
+
+"Hello" : "&nbsp &nbsp &nbsp &nbsp &nbsp  Hi!I am stdbot!!! How can I help you?",
+"hello" : "&nbsp &nbsp &nbsp &nbsp &nbsp  Hi!I am stdbot!!!  How can I help you?",
+
+"Hi" : "&nbsp &nbsp &nbsp &nbsp &nbsp Hi!I am stdbot!!! How can I help you?",
+ "How intense are classes/exams? (hrs/week?)" : "&nbsp &nbsp &nbsp &nbsp &nbsp  5-6 hrs per day i-e 25-30 hrs per week",
+ "Can I feel there is a collaborative environment with other students?" : "&nbsp &nbsp &nbsp &nbsp &nbsp yeah!It depends on you",
+ "Is your lab a good one to join?":"&nbsp &nbsp &nbsp &nbsp &nbsp  Yes, It is Important to join lab in regular basis.Do you need your lab Schedule?",
+"yes" : "&nbsp &nbsp &nbsp &nbsp &nbsp  Monday:Os lab(Time 9:30-11:30),Tuesday:Programming Lab(Time 9:30-11:30);Thrusday:Communication lab(Time 9:30-11:30);Friday:Digital Design Lab(Time 8:30-10:30)",
+ "No" : "&nbsp &nbsp &nbsp &nbsp &nbsp  Its ok",
+ "What do you think of the classes? (Were they valuable, did you learn a lot, did they take a lot of effort, etc?" : "&nsbp &nsbp &nsbp &nsbp &nsbpIt depends how attentive you are during class",
+"What is the timing for midsem?" : "&nbsp &nbsp &nbsp &nbsp &nbsp  It will probably in the last week of September",
+"How old are you?" : "&nbsp &nbsp &nbsp &nbsp &nbsp I am infinity in age"
+
+
+};
+
+function talk() {
+var user = document.getElementById("userBox").value;
+document.getElementById("userBox").value= "";
+document.getElementById("chatLog").innerHTML += user+"<br>";
+
+if (user in know) {
+document.getElementById("chatLog").innerHTML += know[user] + "<br>";
+} else 
+
+{
+document.getElementById("chatLog").innerHTML += "Sorry!I don't understand,Please ask another question... <br>";
+}
+}
+
+
+
+
+
+</script>
+
+
+
+</head>
+
+
+<body>
+
+<p id="chatLog"> - - <b>Student Assitant bot-<br>It helps student to know updated information and time schedule of college</b> - - <br> </p>
+
+<input id="userBox" type="text" onkeydown="if(event.keyCode == 13) {talk()}">
+
+
+</body>
+
+
+
+</html>
